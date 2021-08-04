@@ -57,7 +57,11 @@ Verify with :
 ```
 $ cat /sys/devices/system/cpu/isolated
 12-23
-
+```
+For systemd-boot loader, add the options to:
+```
+vi /boot/loader/entries/omnibius.conf
+options root="PARTUUID=... rw quiet isolcpus=0-1"
 ```
 
 ## Network Ring Buffer Size
